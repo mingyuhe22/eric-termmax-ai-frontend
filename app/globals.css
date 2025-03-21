@@ -1,0 +1,166 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+/* Color theme variables - updated with darker blues and subtle borders */
+:root {
+  --background: #0a0d19;
+  --background-secondary: #0c1221;
+  --background-tertiary: #0a1020;
+  --primary: #5FBDE9;
+  --primary-hover: #3ba7d9;
+  --text: #ffffff;
+  --text-secondary: #9ca3af;
+  --border: #1e2c3b;
+  /* Background colors - darker blues to match design */
+  --background-primary: #0a0e1a;
+  --background-secondary: #0c1221; 
+  --background-tertiary: #0a1020;
+  --background-quaternary: #061020;
+  
+  /* Text colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #A9B1BC;
+  --text-tertiary: #718096;
+  
+  /* Border colors - extremely subtle */
+  --border-primary: rgba(30, 44, 59, 0.15);
+  --border-secondary: rgba(43, 58, 74, 0.1);
+  --border-highlight: rgba(95, 189, 233, 0.15);
+
+  /* Brand colors */
+  --brand-primary: #5FBDE9;
+  --brand-primary-hover: #3ba7d9;
+  --brand-secondary: #3182CE;
+  --brand-secondary-hover: #2c5282;
+  
+  /* Accent colors */
+  --accent-success: #22c55e;
+  --accent-warning: #f59e0b;
+  --accent-danger: #ef4444;
+}
+
+/* Base styles */
+html, body {
+  background: var(--background-primary);
+  color: var(--text-primary);
+    background-color: var(--background);
+  color: var(--text);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(95, 189, 233, 0.3);
+  border-radius: 8px;
+  border: 2px solid var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(95, 189, 233, 0.5);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(95, 189, 233, 0.3) var(--background-secondary);
+}
+
+/* Make sure NavBar appears above other content */
+header {
+  z-index: 50;
+}
+
+/* Adjust heading margins */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Add subtle border to all components that have borders */
+.border-subtle {
+  border-color: var(--border-primary);
+  border-width: 1px;
+}
+
+/* Card styling with subtle borders */
+.card-subtle {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+}
+
+/* Table styles with subtle borders */
+.table-subtle th,
+.table-subtle td {
+  border-color: var(--border-primary);
+}
+
+/* Input styles with subtle borders */
+.input-subtle {
+  background-color: var(--background-quaternary);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+}
+.input-subtle:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 1px rgba(95, 189, 233, 0.2);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--brand-primary);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--brand-primary-hover);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+/* Utility classes for consistent shadows */
+.shadow-card {
+  box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-dropdown {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+/* Glow effects */
+.glow-subtle {
+  box-shadow: 0 0 15px rgba(95, 189, 233, 0.15);
+}
+
+/* Table row hover effect */
+.table-row-hover:hover {
+  background-color: rgba(95, 189, 233, 0.05);
+}
